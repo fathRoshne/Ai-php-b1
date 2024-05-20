@@ -13,13 +13,12 @@
   <link rel="manifest" href="img/fav/site.webmanifest">
   <style>
 
-  .hero-text {
-    text-align: center;
-    color: #333;
-    font-size:40px ;
-    margin-top: 10vh;
-    margin-bottom:10vh ;
-    font-weight: 100;
+.hero-text {
+  text-align: center;
+  color: #333;
+  font-size: 50px;
+  margin-top: 1vh;
+  font-weight: 90;
 }
 </style>
     
@@ -37,10 +36,10 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="register.html">Register</a>
+          <a class="nav-link " aria-current="page" href="register.php">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="login.html">Login</a>
+          <a class="nav-link active" href="login.php">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -61,14 +60,14 @@
   <div class="container . text-center .mt-5 .p-5.mb-5 .fs-3fw-light"  style= "width: 500px;  text-align:center;" >
        
       
-    <form class=".mb-4 .mt-5 " style=" width: 300px  ;text-align: center; ">
+    <form action="dblogin.php" method="POST"class=".mb-4 .mt-5 " style=" width: 300px  ;text-align: center; ">
       
-      <h3   class="  mt-5 hero-text ">Sign in!</h3>
+      <h3   class="hero-text" style="text-align: center">Sign in!</h3>
     <label for="email"  ></label>
     <input type="email" class="text-center form-control " style="width:300px; ;" id="email" name="email" placeholder="Email" required><br>
     
     <label for="password"></label>
-    <input type="password" class="text-center form-control  " id="password" name="password" placeholder="Password"required><br>
+    <input type="password" class="text-center form-control  " id="password" name="pass" placeholder="Password"required><br>
      
     <input type="checkbox" id="rememberMe">
     <label for="rememberMe" style="font-size:small;">

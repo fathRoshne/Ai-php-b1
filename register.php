@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -31,10 +32,10 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+          <a class="nav-link active" aria-current="page" href="register.php">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="login.php">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -44,6 +45,9 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
     </div>
   </div>
 </nav>
@@ -89,5 +93,17 @@
     </div>
   
     </form>
+    <?php
+
+if(isset($_GET['error'])) {
+  echo('
+   <div id="alertbox" class="alert alert-danger mt-3" role="alert">
+      User with this email already exists
+  </div>');
+}
+
+?>
+  </div>
+    
     
     
