@@ -12,7 +12,7 @@ $pass = $_POST['pass'];
 //Handling the Admin Login to Access UsersList.php 
 if($uname == "admin@gmail.com" && $pass == "admin2024"){
         $_SESSION['adminloggedin'] = true;
-        header('Location:usersList.php');
+        header('Location:userList.php');
         exit();
     
 }
@@ -23,7 +23,7 @@ if($uname == "admin@gmail.com" && $pass == "admin2024"){
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "aiphp";
+$dbname = "aiphp-b1";
 
 // Prepare and execute the SQL query to fetch the user details
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -36,18 +36,19 @@ $result = $stmt->get_result();
 if ($result->num_rows === 1) {
     $user = $result->fetch_assoc();
     // Verify the password
-    if ($user['password']===$pass) {
+    if ($user['Password']===$pass) {
         // Redirect to the desired page
         header("Location: dashboard.php");
         exit();
     } else {
         // Invalid password
-        echo "Invalid password. Please try again.";
+         header("Location: login.php?error");
     }
-} else {
+}else {
     // Invalid email or user does not exist
-    echo "Invalid email or user does not exist.";
-}
+        header("Location: login.php?error");
+    }
+
 
 // Close the database connection
 $stmt->close();

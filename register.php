@@ -45,9 +45,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-      <div class="alert alert-danger" role="alert">
-  A simple danger alert—check it out!
-</div>
+       
     </div>
   </div>
 </nav>
@@ -57,12 +55,12 @@
     <form action="dbregister.php" method="POST">
      
     
-    <img src="img/fav/logo/logo.png" width="80" height="80" alt="logo"   align="left">
+    <img src="img/fav/logo/logo.png" width="80" height="80" alt="logo"    align="left">
     <h2 class=" hero-text"style="text-align: center" >Lets get Registered!</h2><br>
 
     <div class="mb-3 " style="width:380px;">
      
-      <input type="email" class="text-center form-control" id="email" name="email" placeholder="Email" required><br>
+      <input type="email" class="text-center form-control" onkeyup="hideAlertBox()" id="email" name="email" placeholder="Email" required><br>
     <label for="firstName"> </label>
     <input type="text" class=" text-center form-control" id="firstName" name="firstName" placeholder="First Name"><br>
     
@@ -95,15 +93,28 @@
     </form>
     <?php
 
-if(isset($_GET['error'])) {
-  echo('
-   <div id="alertbox" class="alert alert-danger mt-3" role="alert">
-      User with this email already exists
-  </div>');
-}
+        if(isset($_GET['error'])) {
+          echo('
+           <div id="alertbox" class="alert alert-danger mt-3" role="alert">
+              User with this email already exists
+          </div>');
+        }
+        
+        ?>
 
-?>
+ 
+
+
   </div>
+  <script>
+      function hideAlertBox() {
+        const alertBox = document.getElementById("alertbox");
+        alertBox.style.display = "none";
+      }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body> 
+</html>
     
     
     

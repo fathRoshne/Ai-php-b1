@@ -57,18 +57,18 @@
      
  
   <body style="background-color:  skyblue;"> 
-  <div class="container . text-center .mt-5 .p-5.mb-5 .fs-3fw-light"  style= "width: 500px;  text-align:center;" >
+  
        
-      
-    <form action="dblogin.php" method="POST"class=".mb-4 .mt-5 " style=" width: 300px  ;text-align: center; ">
+  <div class="container-md text-center mt-5 p-4 mb-3  "   style= "width: 430px ; background-color:skyblue;border-radius: 50px;">   
+    <form action="dblogin.php" method="POST" class=".mb-4 .mt-5 " style=" width: 300px  ;text-align: center; ">
       
       <h3   class="hero-text" style="text-align: center">Sign in!</h3>
     <label for="email"  ></label>
     <input type="email" class="text-center form-control " style="width:300px; ;" id="email" name="email" placeholder="Email" required><br>
     
     <label for="password"></label>
-    <input type="password" class="text-center form-control  " id="password" name="pass" placeholder="Password"required><br>
-     
+    <input type="password" class="text-center form-control  " id="password" name="pass" placeholder="Password"><br>
+  
     <input type="checkbox" id="rememberMe">
     <label for="rememberMe" style="font-size:small;">
       Remember Me 
@@ -79,3 +79,14 @@
     </div>
   </body>
   </form>
+  <?php
+
+if(isset($_GET['error'])) {
+  echo('
+   <div id="alertbox" class="alert alert-danger mt-3" style="height:50px;  text-align:center; align:center;" role="alert">
+      Email or Password is incorrect
+  </div>');
+}
+
+?>
+</html>

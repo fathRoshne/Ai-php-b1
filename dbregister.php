@@ -12,8 +12,8 @@ $dbname = "aiphp-b1";
 
 
 // Generate a random password
-function generatePassword($length = 8) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+function generatePassword($length = 4) {
+    $characters = '01234569abcdefghirstuABCDEWXYZ';
     $password = '';
 
     for ($i = 0; $i < $length; $i++) {
@@ -46,13 +46,16 @@ $sql = "INSERT INTO employee (email, firstName, lastName, gender, phone, salary,
 
 try {
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        header('Location:login.php');
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 } catch (mysqli_sql_exception $e) {
     if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
-        echo "User Already Exists";
+        header('Location:register.php?error');
+        exit();
+
     } else {
         echo "Error: " . $e->getMessage();
     }
