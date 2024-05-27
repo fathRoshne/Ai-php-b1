@@ -1,3 +1,4 @@
+ 
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,9 +19,25 @@
             margin-top: 10vh;
             font-weight: 100;
         }
+        .dash-card-text {
+            text-align: center;
+            color: #333;
+            font-size: 2rem;
+            margin-top: 1vh;
+            font-weight: 100;
+            text-decoration: none;
+        }
+        .dash-card{
+          text-decoration: none;
+          transition:all 0.5s;
+        }
+        .dash-card:hover{
+          box-shadow: 0 0 10px rgba(64, 79, 219, 0.5);
+          transform: scale(1.02);
+        }
     </style>
 </head>
-  <body>
+  <body style="background-color: skyblue;"  >
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -48,10 +65,18 @@
         </div>
       </nav>
       
-      <div class="container-md text-center mt-5" style="max-width: 700px;">
-        <div class="mb-4 hero-text">OneStop Dashboard</div>
-        
+      <div class="container-md text-center mt-5" style="max-width: 700px; ">
+        <div class="mb-4 hero-text">One-Stop Dashboard</div>
+        <div class="row">
+          
+          
+          <a class="col-4 dash-card card p-3 rounded-5 border border-info border border-3" style="width: 10rem;" href="notes/index.php">
+          <img src="img/dash/android-chrome-512x512.png" class="card-img-top" alt="..."/>
+          <h3 class="dash-card-text">Notes App</h3>
+          </a>
+          
     </div>
+     
    
 
     
