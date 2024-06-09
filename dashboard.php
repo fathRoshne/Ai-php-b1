@@ -46,21 +46,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="register.php">Register</a>
-              </li>     
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="login.php">Login</a>
-              </li>    
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                    </li>
+                    
+                    
+                </ul>
+                <form class="d-flex" role="search">
+                    
+                    <a href="../logout.php" class="btn btn-outline-danger" >Logout</a>
+                </form>
           </div>
         </div>
       </nav>
@@ -73,6 +69,11 @@
           <a class="col-4 dash-card card p-3 rounded-5 border border-info border border-3" style="width: 10rem;" href="notes/index.php">
           <img src="img/dash/android-chrome-512x512.png" class="card-img-top" alt="..."/>
           <h3 class="dash-card-text">Notes App</h3>
+          </a>
+          &ensp; &ensp; &ensp;
+          <a class="col-4 dash-card card p-3 rounded-5 border border-info border border-3" style="width: 10rem;" href="notes/index.php">
+          <img src="img/dash/android-chrome-512x512.png" class="card-img-top" alt="..."/>
+          <h3 class="dash-card-text">Task App</h3>
           </a>
           
     </div>
