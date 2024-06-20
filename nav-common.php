@@ -27,9 +27,9 @@
 <form class="d-flex" role="search">
 <?php 
       if(basename($_SERVER['PHP_SELF']) === 'register.php') {
-          echo'<a class="btn btn-primary" href="register.php">Register</a>&ensp;';
+          echo'<a class="btn btn-success" href="register.php">Register</a>&ensp;';
       }else{
-          echo'<a class="btn btn-outline- primary" href="register.php">Register</a>&ensp;';
+          echo'<a class="btn btn-outline-success" href="register.php">Register</a>&ensp;';
       }
   ?>
 

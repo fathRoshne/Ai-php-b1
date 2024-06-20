@@ -53,6 +53,7 @@
                     
                     
                 </ul>
+                
                 <form class="d-flex" role="search">
                     
                     <a href="../logout.php" class="btn btn-outline-danger" >Logout</a>
@@ -71,7 +72,7 @@
           <h3 class="dash-card-text">Notes App</h3>
           </a>
           &ensp; &ensp; &ensp;
-          <a class="col-4 dash-card card p-3 rounded-5 border border-info border border-3" style="width: 10rem;" href="notes/index.php">
+          <a class="col-4 dash-card card p-3 rounded-5 border border-info border border-3" style="width: 10rem;" href="tasks/task.php">
           <img src="img/dash/task/android-chrome-512x512.png" class="card-img-top" alt="..."/>
           <h3 class="dash-card-text">Task <br>App</h3>
           </a>
