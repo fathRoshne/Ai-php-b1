@@ -54,14 +54,19 @@ $conn->close();
 
  }
   //Check if a delete request is made
-  if(isset($_GET['delid'])){
-    $delid = $_GET['delid'];
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "DELETE FROM item WHERE ItemId & Description = $delid";
-    if($conn->query($sql) === TRUE){
-        header('Location:index.php?deleted');
-        exit();
-    };
-    $conn->close();
-}
+  
+    //Check if a delete request is made
+    if(isset($_GET['delid'])){
+        $delid = $_GET['delid'];
+        $listName = $_GET['listName'];
+        $cdate = $_GET['cdate'];
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        $sql = "DELETE FROM item WHERE ItemId = '".$delid."'";
+        if($conn->query($sql) === TRUE){
+            header("Location:index.php?listName=" . $listName . "&cdate=" . $cdate . "&deleted");
+            exit();
+        }
+    
+    }
+
  ?>

@@ -147,9 +147,9 @@
                         $lname=$row["listName"];
                         $cdate=$row["createdDate"];
                         // Display the data in table rows
-                        echo "<tr>";
+                        echo "<tr> ";
                         echo "<td class='p-3'>".$row["createdDate"]."</td>";
-                        echo "<td class='p-3'><a href='../items/index.php?listName=" . $lname . "&cdate=" . $cdate . "'>" . $lname . "</a></td>";
+                        echo "<td class='p-3'><a href='../items/index.php?listName=" . $lname . "&cdate=" . $cdate . "' class='btn active' aria-current='page'>$lname</a> </td>";
                         echo "<td class='p-3'>" . $row["caption"] . "</td>";
                         echo "<td class='p-3'> <a class='btn btn-outline-danger' href=" . "dbtask.php?delid=" . $row["id"] . ">X</a> </td>";
                        

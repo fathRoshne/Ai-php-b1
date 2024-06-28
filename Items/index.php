@@ -61,11 +61,11 @@
         </div>
       </nav>
         
-      <div class="container-md text-center mt-5" style="max-width: 700px;">
+      <div class="container-md text-center mt-5 border " style="max-width: 700px; border-width: 100px;">
         <div class="hero-text"> <?php echo($lname)?> </br> </div>
         <div><span class="text-secondary fs-5 mt-0 p-0"><?php echo($cdate)?></div>
      
-        <form action="dbitems.php?listName=<?php echo ($lname); ?>&cdate=<?php echo ($cdate); ?>" method="POST" class="row g-3 mt-1">
+        <form action="dbitems.php?listName=<?php echo ($lname); ?>&cdate=<?php echo ($cdate); ?>" method="POST" class="row g-3 mt-1 ">
             <div class="col-10 ">
                 <input type="text" class="form-control" id="title" name="description" placeholder="Description" required/>
                  
@@ -145,15 +145,15 @@
                     while ($row = $result->fetch_assoc()) {
                         
                         // Display the data in table rows
-                        echo('<li class="list-group-item fs-5 fw-light">
-                      <input class="form-check-input me-1" type="checkbox" value="" id="'. $row ['ItemId'].'" >
-                       <label class="form-check-label stretched-link" for="'. $row ['ItemId'].'" >'.$row['Description'].'</label>
-                        ');
+                        echo ('<li class="list-group-item fs-4 fw-light">
+        
                         
-                        echo" <a class='btn btn-outline-danger' href=" . "dbitems.php?delid=" . $row["ItemId"] . "&listName=" . $row['Description']. ">X</a> </li>";
+        <input class="form-check-input me-1" type="checkbox" value="" id="' . $row['ItemId'] . '" onchange="updateStatus(' . $row['ItemId'] . ')"' . ($row['Status'] == '1' ? ' checked' : '') . '/>
+        <label class="form-check-label ' . ($row['Status'] == '1' ? 'text-decoration-line-through' : '') . '" for="' . $row['ItemId'] . '">' . $row["Description"] . '</label>
+    
+                 ');
                         
-                      
-                       
+                 echo('<a class="btn btn-outline-danger" href="dbitems.php?delid=' . $row['ItemId'] . '&listName=' . urlencode($lname) . '&cdate=' . urlencode($cdate) . '">X</a>'); 
                      
                     }
                 } else {
@@ -167,6 +167,46 @@
             </ul>
             </div>
     </div>
+
+
+     <!-- Item Status Update Function -->
+     <script>
+        function updateStatus(ItemId) {
+
+            // Get the checkbox element
+    var checkbox = document.getElementById(ItemId);
+
+// Get the label element
+var label = document.querySelector(`label[for="${ItemId}"]`);
+
+// Check if the checkbox is checked
+if (checkbox.checked) {
+    // Add the strike-through class to the label
+    label.classList.add('text-decoration-line-through');
+} else {
+    // Remove the strike-through class from the label
+    label.classList.remove('text-decoration-line-through');
+}
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'dbupdatestatus.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Handle the response from the server
+                    var response = xhr.responseText;
+                    console.log(response);
+                }
+            };
+            xhr.send('ItemId=' + ItemId);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
    
 
 
