@@ -59,49 +59,74 @@
           <button type="button" data-bs-target="#employeeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#employeeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-    <div class="row">
-      <div class="col">
-        <div id=" employeeCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/fav/carousels/1.png" class="d-block w-100" >
-              <div class="carousel-caption">
-                <h3> Employee Assistance Program (EAP)</h3>
-                <p>Offer a confidential and free assistance program for employees facing mental health or substance abuse issues, providing support and resources to help them overcome challenges.</p> 
-              </div>
-              </div>
+      <div class="row">
+    <div class="col">
+        <div id="employeeCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/fav/carousels/1.png" class="d-block w-100" alt="Employee Assistance Program (EAP)">
+                    <div class="carousel-caption">
+                        <h3>Employee Assistance Program (EAP)</h3>
+                        <p>Offer a confidential and free assistance program for employees facing mental health or substance abuse issues, providing support and resources to help them overcome challenges.</p> 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/fav/carousels/2.png" class="d-block w-100" alt="Health and Wellness">
+                    <div class="carousel-caption">
+                        <h3>Health and Wellness</h3>
+                        <p>Provide access to healthcare benefits, fitness programs, and mental health resources to promote employee health and well-being.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/fav/carousels/3.png" class="d-block w-100" alt="Employee Training">
+                    <div class="carousel-caption">
+                        <h3>Employee Training</h3>
+                        <p>Provide regular training and development opportunities for employees to enhance their skills, knowledge, and career prospects.</p>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-              <img src="img/fav/carousels/2.png" class="d-block w-100"  >
-              <div class="carousel-caption">
-                <h3>  Health and Wellness</h3>
-                <p>provide access to healthcare benefits, fitness programs, and mental health resources to promote employee health and well-being.</p>
-             
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/fav/carousels/3.png" class="d-block w-100"  >
-              <div class="carousel-caption">
-                <h3> Employee Training</h3>
-                <p>Provide regular training and development opportunities for employees to enhance their skills, knowledge, and career prospects.</p>
-              </div>
-            </div>
-          </div>
-           
-
             <button class="carousel-control-prev" type="button" data-bs-target="#employeeCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target=" employeeCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
-          </a>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#employeeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-      </div>
     </div>
-  </div>
+</div><br><hr>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="img/card/1.png" class="card-img-top" alt="Cloud Storage">
+            <div class="card-body">
+                <h5 class="card-title">Cloud Storage</h5>
+                <p class="card-text">Provide secure and reliable cloud storage options for employees to store and access their files from anywhere.</p>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="img/card/2.png" class="card-img-top" alt="Collaboration Tools">
+            <div class="card-body">
+                <h5 class="card-title">Collaboration Tools</h5>
+                <p class="card-text">Offer collaboration tools such as shared folders, document sharing, and real-time collaboration features to facilitate teamwork and collaboration.</p>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="img/card/3.png" class="card-img-top" alt="Data Backup">
+            <div class="card-body">
+                <h5 class="card-title">Data Backup</h5>
+                <p class="card-text">Implement regular data backups to ensure that employees' files and data are protected against loss or corruption.</p>
+            </div>
+        </div>
+    </div><hr>
+</div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
