@@ -30,8 +30,7 @@
     </style>
 </head>
   <body >
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="../img/fav/favicon-32x32.png" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,10 +41,11 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                     </li>
+                     
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../dashboard.php">Dashboard</a>
                     </li>
-                    
+                     
                 </ul>
                 <form class="d-flex" role="search">
                     
@@ -54,6 +54,10 @@
           </div>
         </div>
       </nav>
+
+  <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
         
       <div class="container-md text-center mt-5" style="max-width: 700px;">
         <div class="mb-4 hero-text">Notes App</div>

@@ -67,7 +67,7 @@
         <div class="row">
           
           
-          <a class="col-4 dash-card card p-3 rounded-5 border border-info border border-3" style="width: 10rem;" href="notes/index.php">
+          <a class="col-4 dash-card card p-3 rounded-5 border border-info border border-3 " style="width: 10rem;" href="notes/index.php">
           <img src="img/dash/android-chrome-512x512.png" class="card-img-top" alt="..."/>
           <h3 class="dash-card-text">Notes App</h3>
           </a>
